@@ -1,0 +1,24 @@
+@import 'typography';
+@import 'colors';
+
+.action-list {
+  display: inline-block;
+
+  &__item, &__item > a {
+    display: inline-block;
+    text-decoration: none;
+    color: $c1;
+
+    &_selected {
+
+    }
+
+    & > span:hover, & > a > span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item + &__item {
+    padding-left: $gapLR;
+  }
+}

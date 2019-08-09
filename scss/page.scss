@@ -1,0 +1,81 @@
+@import 'typography';
+@import 'colors';
+
+.page {
+  color: $c0;
+  font-family: Arial;
+  font-size: $textFontSize;
+  line-height: $lineHeight;
+
+  &__header {
+    border-bottom: 1px solid $c01;
+  }
+
+  &__brand {
+    font-size: $h1FontSize;
+    text-decoration: none;
+  }
+
+  &__menu {
+    float: right;
+    margin-right: $gapLR;
+
+    &::after {
+      clear: both;
+      content: "";
+    }
+  }
+
+  &__navs {
+    display: block !important;
+    background: $c1;
+    font-size: $h2FontSize;
+
+    & .action-list__item {
+      color: #fff;
+    }
+  }
+
+  &__breadcrumbs {
+    & > a + a {
+      padding: 0px !important;
+      color: $c0;
+      cursor: text;
+
+      &::before {
+        content: "/";
+        // margin-left: $gapLR;
+        // margin-right: $gapLR;
+        display: inline-block;
+        width: 2 * $gapLR + $textFontSize;
+        text-decoration: none !important;
+        text-align: center;
+      }
+
+      &:hover, & > span {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__brand, &__navs, &__breadcrumbs {
+    padding-left: $gapLR;
+  }
+
+  & input[type=checkbox] {
+    margin: 0px;
+  }
+
+  & a {
+    color: $c1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
