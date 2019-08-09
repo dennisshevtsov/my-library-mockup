@@ -1,0 +1,28 @@
+@import 'typography';
+
+.breadcrumb-list {
+  &__item:first-child {
+    margin-left: $gapLR;
+  }
+
+  &__item + &__item {
+    padding: 0px !important;
+    color: $c0;
+    cursor: text;
+
+    &::before {
+      content: "/";
+
+      padding: 0 $gapLR;
+
+      text-decoration: none !important;
+      text-align: center;
+
+      cursor: text;
+    }
+
+    &:hover, & > span {
+      text-decoration: none !important;
+    }
+  }
+}

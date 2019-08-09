@@ -1,0 +1,11 @@
+@import 'typography';
+
+.nav-list {
+  &__item:first-child {
+    margin-left: $gapLR;
+  }
+
+  &__item + &__item {
+    margin-left: $gapLR;
+  }
+}
