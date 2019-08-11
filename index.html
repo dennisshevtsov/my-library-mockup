@@ -29,34 +29,50 @@
     </nav>
   </header>
   <main class="page__content">
+    <div class="page__action-bar">
+      <ul class="action-list">
+        <li class="action-list__item"><a href="#"><span>edit</span></a></li>
+        <li class="action-list__item"><a href="#"><span>disable</span></a></li>
+      </ul>
+      <div class="search">
+        <input class="search__field" type="search" placeholder="Type search term">
+        <button class="search__action"></button>
+      </div>
+      <ul class="action-list">
+        <li class="action-list__item"><a href="#"><span>&lt;&lt;</span></a></li>
+        <li class="action-list__item"><a href="#"><span>&lt;</span></a></li>
+        <li class="action-list__item"><a href="#"><span>&gt;</span></a></li>
+        <li class="action-list__item"><a href="#"><span>&gt;&gt;</span></a></li>
+      </ul>
+    </div>
     <table class="grid">
       <thead>
         <tr class="grid__row grid__row_headed">
           <th class="grid__cell"><input type="checkbox"></th>
           <th class="grid__cell">
-            <span>Title</span>
+            <span class="grid__col-name">Title<i class="grid__sort grid__sort_up"></i></span>
           </th>
           <th class="grid__cell">
-            <span>Authors</span>
+            <span class="grid__col-name">Authors</span>
           </th>
           <th class="grid__cell">
-            <span>Genres</span>
+            <span class="grid__col-name">Genres</span>
           </th>
           <th class="grid__cell"></th>
         </tr>
         <tr class="grid__row grid__row_headed">
-            <th class="grid__cell"></th>
-            <th class="grid__cell">
-              <input placeholder="Title">
-            </th>
-            <th class="grid__cell">
-              <input placeholder="Title">
-            </th>
-            <th class="grid__cell">
-              <input placeholder="Title">
-            </th>
-            <th class="grid__cell"></th>
-          </tr>
+          <th class="grid__cell"></th>
+          <th class="grid__cell">
+            <input placeholder="Title">
+          </th>
+          <th class="grid__cell">
+            <input placeholder="Title">
+          </th>
+          <th class="grid__cell">
+            <input placeholder="Title">
+          </th>
+          <th class="grid__cell"></th>
+        </tr>
       </thead>
       <tbody>
         <tr class="grid__row">
