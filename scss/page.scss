@@ -3,13 +3,11 @@
 
 .page {
   color: $c0;
-  font-family: Arial;
+  font-family: $fontFamily;
   font-size: $textFontSize;
   line-height: $lineHeight;
 
   &__header {
-    border-bottom: 1px solid $c01;
-
     &::after {
       clear: both;
       content: "";
@@ -50,11 +48,24 @@
 
   &__action-bar {
     padding-left: $gapLR;
-    border-bottom: 1px solid $c01;
+  }
+
+  &__main {
+    @extend %pageBlock;
   }
 
   &__content {
+    @extend %pageBlock;
 
+    padding-left: $gapLR;
+
+    @at-root table#{&} {
+      padding-left: 0;
+
+      th, td {
+        padding-left: $gapLR;
+      }
+    }
   }
 
   & input[type=checkbox] {

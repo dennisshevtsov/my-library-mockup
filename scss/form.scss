@@ -1,0 +1,20 @@
+@import 'typography';
+@import 'button';
+
+.form {
+  &__control {
+
+  }
+
+  &__action-bar {
+    @extend %pageBlock;
+  }
+
+  &__ok {
+    @extend %button;
+  }
+
+  &__cancel {
+    @extend %button;
+  }
+}
