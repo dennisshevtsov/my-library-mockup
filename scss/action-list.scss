@@ -1,18 +1,20 @@
 @import 'typography';
+@import 'link';
 
 .action-list {
-  display: inline-block;
-
-  &__item, &__item > a {
+  &__item {
     display: inline-block;
-    text-decoration: none;
 
-    & > span:hover, & > a > span:hover {
-      text-decoration: underline;
+    & + & {
+      padding-left: $gapLR;
     }
   }
 
-  &__item + &__item {
-    padding-left: $gapLR;
+  &__action {
+    @extend %link;
+
+    & + & {
+      padding-left: $gapLR;
+    }
   }
 }

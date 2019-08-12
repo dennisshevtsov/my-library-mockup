@@ -18,6 +18,8 @@
   }
 
   &__brand {
+    @extend %link;
+
     padding-left: $gapLR;
     font-size: $h1FontSize;
     float: left;
@@ -36,6 +38,7 @@
     width: 100%;
 
     a {
+      @extend %link;
       color: #fff !important;
     }
   }
@@ -45,20 +48,16 @@
     width: 100%;
   }
 
+  &__action-bar {
+    padding-left: $gapLR;
+    border-bottom: 1px solid $c01;
+  }
+
   &__content {
 
   }
 
   & input[type=checkbox] {
     margin: 0px;
-  }
-
-  & a {
-    color: $c1;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

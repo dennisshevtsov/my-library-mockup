@@ -1,6 +1,11 @@
 @import 'typography';
+@import 'link';
 
 .breadcrumb-list {
+  &__item {
+    @extend %link;
+  }
+
   &__item:first-child {
     margin-left: $gapLR;
   }

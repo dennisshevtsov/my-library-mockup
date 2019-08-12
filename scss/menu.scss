@@ -1,11 +1,16 @@
 @import 'typography';
+@import 'link';
 
 .menu {
-  &__item:first-child {
-    margin-left: $gapLR;
-  }
+  &__item {
+    @extend %link;
 
-  &__item + &__item {
-    margin-left: $gapLR;
+    &:first-child {
+      margin-left: $gapLR;
+    }
+
+    & + & {
+      margin-left: $gapLR;
+    }
   }
 }
