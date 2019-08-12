@@ -5,7 +5,6 @@
 
   &__row {
     &_headed {
-      font-weight: bold;
       border-bottom: 1px solid $c01;
     }
   }
@@ -16,6 +15,21 @@
 
     a {
       @extend %link;
+    }
+  }
+
+  &__col-name {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__sort {
+    &_up:after {
+      content: ' ↑';
+    }
+
+    &_down:after {
+      content: ' ↓';
     }
   }
 }
