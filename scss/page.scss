@@ -57,8 +57,6 @@
   &__content {
     @extend %pageBlock;
 
-    padding-left: $gapLR;
-
     @at-root table#{&} {
       padding-left: 0;
 

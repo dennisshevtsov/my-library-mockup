@@ -1,6 +1,12 @@
+@import 'input';
+
 .control {
   &__field {
-    
+    @extend %input;
+  }
+
+  &__field-set {
+    display: inline-block;
   }
 
   &__label {

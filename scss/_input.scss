@@ -1,0 +1,13 @@
+@import 'typography';
+
+$borderSize: 1px;
+$paddingLR: $gapLR - $borderSize;
+$paddingTB: $gapLR / 2;
+
+%input {
+  font-family: $fontFamily;
+  font-size: $textFontSize;
+
+  padding: $paddingTB $paddingLR;
+  border: 1px solid $c01;
+}
