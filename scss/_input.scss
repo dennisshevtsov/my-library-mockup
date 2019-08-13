@@ -1,10 +1,10 @@
 @import 'typography';
 
 %input {
-  font-family: $fontFamily;
-  font-size: $inputFontSize;
+  @extend %fontBase;
+  @extend %text;
+  
   line-height: 1;
-  color: $c0;
 
   padding: $inputPaddingTB $inputPaddingLR;
   border: $inputBorderSize solid $c01;

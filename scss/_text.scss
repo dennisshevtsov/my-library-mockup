@@ -1,9 +1,14 @@
 @import 'typography';
 @import 'colors';
 
-%textBase {
+%fontBase {
   font-family: $fontFamily;
   font-size: $textFontSize;
+}
+
+%textBase {
+  @extend %fontBase;
+
   line-height: $lineHeight;
 }
 
@@ -13,6 +18,7 @@
 
 %h2Base {
   font-size: $h2FontSize;
+  line-height: 1;
 }
 
 %text {
@@ -21,12 +27,12 @@
 
 %h1 {
   @extend %h1Base;
-  color: $c0;
+  @extend %text;
 }
 
 %h2 {
   @extend %h2Base;
-  color: $c0;
+  @extend %text;
 }
 
 %linkBase {
@@ -39,7 +45,6 @@
 }
 
 %link {
-  @extend %textBase;
   @extend %linkBase;
 }
 
