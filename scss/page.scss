@@ -7,6 +7,10 @@
   font-size: $textFontSize;
   line-height: $lineHeight;
 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   &__header {
     &::after {
       clear: both;
@@ -29,16 +33,8 @@
   }
 
   &__nav-bar {
-    display: block !important;
-    background: $c1;
-    font-size: $h2FontSize;
     float: left;
     width: 100%;
-
-    a {
-      @extend %link;
-      color: #fff !important;
-    }
   }
 
   &__breadcrumb-bar {
@@ -52,10 +48,17 @@
 
   &__main {
     @extend %pageBlock;
+
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__content {
     @extend %pageBlock;
+
+    flex: 1 1 auto;
 
     @at-root table#{&} {
       padding-left: 0;
@@ -64,9 +67,5 @@
         padding-left: $gapLR;
       }
     }
-  }
-
-  & input[type=checkbox] {
-    margin: 0px;
   }
 }

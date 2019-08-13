@@ -4,30 +4,31 @@
 .breadcrumb-list {
   &__item {
     @extend %link;
-  }
+    text-transform: uppercase;
 
-  &__item:first-child {
-    margin-left: $gapLR;
-  }
-
-  &__item + &__item {
-    padding: 0px !important;
-    color: $c0;
-    cursor: text;
-
-    &::before {
-      content: "/";
-
-      padding: 0 $gapLR;
-
-      text-decoration: none !important;
-      text-align: center;
-
-      cursor: text;
+    &:first-child {
+      margin-left: $gapLR;
     }
 
-    &:hover, & > span {
-      text-decoration: none !important;
+    & + & {
+      padding: 0px !important;
+      color: $c0;
+      cursor: text;
+  
+      &::before {
+        content: "/";
+  
+        padding: 0 $gapLR;
+  
+        text-decoration: none !important;
+        text-align: center;
+  
+        cursor: text;
+      }
+  
+      &:hover, & > span {
+        text-decoration: none !important;
+      }
     }
   }
 }

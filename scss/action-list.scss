@@ -4,6 +4,7 @@
 .action-list {
   &__item {
     display: inline-block;
+    text-transform: lowercase;
 
     & + & {
       padding-left: $gapLR;

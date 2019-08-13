@@ -14,3 +14,9 @@ $gapTB: $gapLR;
 %pageBlock {
   border-top: 1px solid $c01;
 }
+
+$inputFontSize: $textFontSize;
+$inputBorderSize: 1px;
+$inputPaddingLR: $gapLR - $inputBorderSize;
+$inputPaddingTB: $gapLR - $inputBorderSize;
+$inputHeight: $inputFontSize + 2 * $inputPaddingTB + 2 * $inputBorderSize;

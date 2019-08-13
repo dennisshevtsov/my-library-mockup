@@ -1,16 +1,33 @@
+@import 'typography';
 @import 'input';
+
+$labelWidth: 200px;
+$inputWidth: 300px;
+$textAreaWidth: 450px;
+$textAreaHeight: 200px;
 
 .control {
   &__field {
     @extend %input;
-  }
 
-  &__field-set {
-    display: inline-block;
+    vertical-align: baseline;
+
+    @at-root textarea#{&} {
+      width: $textAreaWidth;
+      height: $textAreaHeight;
+
+      line-height: 1.5;
+    }
+
+    @at-root input#{&} {
+      width: $inputWidth;
+    }
   }
 
   &__label {
     display: inline-block;
-    width: 300px;
+    width: $labelWidth;
+
+    padding-left: $gapLR;
   }
 }

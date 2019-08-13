@@ -5,7 +5,10 @@
   width: 100%;
 
   &__row {
+    border-top: 1px solid $c01;
+
     &_headed {
+      border-top: none;
       border-bottom: 1px solid $c01;
     }
   }
@@ -15,6 +18,10 @@
 
     a {
       @extend %link;
+    }
+
+    input[type=checkbox] {
+      margin: 0px;
     }
   }
 

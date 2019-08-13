@@ -1,13 +1,30 @@
 @import 'typography';
 @import 'button';
 
-.form {
-  &__control {
+$formPaddingTB: ($lineHeight - $inputHeight) / 2;
 
+.form {
+  padding-top: $formPaddingTB;
+
+  display: flex;
+  flex-direction: column;
+
+  &__controls {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__control {
+    min-width: 50%;
+    flex-grow: 0.5;
   }
 
   &__action-bar {
     @extend %pageBlock;
+    text-align: right;
+    padding-right: $gapLR;
   }
 
   &__ok {

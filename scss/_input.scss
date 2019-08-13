@@ -1,13 +1,11 @@
 @import 'typography';
 
-$borderSize: 1px;
-$paddingLR: $gapLR - $borderSize;
-$paddingTB: $gapLR / 2;
-
 %input {
   font-family: $fontFamily;
-  font-size: $textFontSize;
+  font-size: $inputFontSize;
+  line-height: 1;
+  color: $c0;
 
-  padding: $paddingTB $paddingLR;
-  border: 1px solid $c01;
+  padding: $inputPaddingTB $inputPaddingLR;
+  border: $inputBorderSize solid $c01;
 }

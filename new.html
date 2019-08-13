@@ -11,7 +11,7 @@
 
 <body class="page">
   <header class="page__header">
-    <a class="page__brand" href="/">
+    <a class="page__brand" href="index.html">
       <span>MyLibrary</span>
     </a>
     <nav class="page__menu menu">
@@ -19,13 +19,13 @@
       <a class="menu__item" href="#"><span>Help</span></a>
     </nav>
     <nav class="page__nav-bar nav-list">
-      <a class="nav-list__item" href="#"><span>Books</span></a>
+      <a class="nav-list__item" href="index.html"><span>Books</span></a>
       <a class="nav-list__item" href="#"><span>Authors</span></a>
       <a class="nav-list__item" href="#"><span>Genres</span></a>
     </nav>
     <nav class="page__breadcrumb-bar breadcrumb-list">
-      <a class="breadcrumb-list__item" href="#"><span>Books</span></a>
-      <a class="breadcrumb-list__item" href="#"><span>Add new Book</span></a>
+      <a class="breadcrumb-list__item" href="index.html"><span>Books</span></a>
+      <a class="breadcrumb-list__item" href="new.html"><span>Add new book</span></a>
     </nav>
   </header>
   <main class="page__main">
@@ -35,54 +35,41 @@
       </ul>
     </div>
     <form class="page__content form">
-      <div class="form__control control">
-        <label for="title" class="control__label">Title</label>
-        <input id="title" name="title" type="text" class="control__field">
-      </div>
-      <div class="form__control control">
-        <label for="annotation" class="control__label">Annotation</label>
-        <input id="annotation" name="annotation" type="text" class="control__field">
-      </div>
-      <div class="form__control control">
-        <label for="author" class="control__label">Author</label>
-        <div class="control__field-set">
+      <div class="form__controls">
+        <div class="form__control control">
+          <label for="title" class="control__label">Title:</label>
+          <input id="title" name="title" type="text" class="control__field">
+        </div>
+        <div class="form__control control">
+          <label for="author" class="control__label">Author:</label>
           <input id="author" name="author" type="text" class="control__field">
-          <input id="author1" name="author" type="text" class="control__field">
-          <input id="author2" name="author" type="text" class="control__field">
-          <input id="author3" name="author" type="text" class="control__field">
         </div>
-      </div>
-      <div class="form__control control">
-        <label for="genre" class="control__label">Genre</label>
-        <div class="control__field-set">
+        <div class="form__control control">
+          <label for="genre" class="control__label">Genre:</label>
           <input id="genre" name="genre" type="text" class="control__field">
-          <input id="genre1" name="genre" type="text" class="control__field">
-          <input id="genre2" name="genre" type="text" class="control__field">
-          <input id="genre3" name="genre" type="text" class="control__field">
         </div>
-      </div>
-      <div class="form__control control">
-        <label for="tag" class="control__label">Tag</label>
-        <div class="control__field-set">
+        <div class="form__control control">
+          <label for="tag" class="control__label">Tag:</label>
           <input id="tag" name="tag" type="text" class="control__field">
-          <input id="tag1" name="tag" type="text" class="control__field">
-          <input id="tag2" name="tag" type="text" class="control__field">
-          <input id="tag3" name="tag" type="text" class="control__field">
         </div>
-      </div>
-      <div class="form__control control">
-        <label for="pageCount" class="control__label">Page Count</label>
-        <input id="pageCount" name="pageCount" type="text" class="control__field">
-      </div>
-      <div class="form__control control">
-        <label for="cover" class="control__label">Cover</label>
-        <input id="cover" name="cover" type="text" class="control__field">
+        <div class="form__control control">
+          <label for="pageCount" class="control__label">Page Count</label>
+          <input id="pageCount" name="pageCount" type="text" class="control__field">
+        </div>
+        <div class="form__control control">
+          <label for="cover" class="control__label">Cover</label>
+          <input id="cover" name="cover" type="text" class="control__field">
+        </div>
+        <div class="form__control control">
+          <label for="annotation" class="control__label">Annotation:</label>
+          <textarea id="annotation" name="annotation" class="control__field"></textarea>
+        </div>
       </div>
       <div class="form__action-bar">
         <button type="submit" class="form__ok"><i></i><span>OK</span></button>
         <button type="button" class="form__cancel"><span><i></i>Cancel</span></button>
       </div>
-      </div>
+    </form>
   </main>
 </body>
 

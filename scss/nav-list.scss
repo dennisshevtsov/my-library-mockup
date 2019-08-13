@@ -1,11 +1,20 @@
 @import 'typography';
 
 .nav-list {
-  &__item:first-child {
-    margin-left: $gapLR;
-  }
+  display: block;
+  background: $c1;
+  font-size: $h2FontSize;
 
-  &__item + &__item {
-    margin-left: $gapLR;
+  &__item {
+    @extend %link;
+    color: #fff !important;
+
+    &:first-child {
+      margin-left: $gapLR;
+    }
+  
+    & + & {
+      margin-left: $gapLR;
+    }
   }
 }
