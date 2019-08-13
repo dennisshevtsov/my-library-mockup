@@ -1,33 +1,21 @@
 @import 'typography';
 @import 'colors';
 
-// %text {
-//   color: $c0;
-
-//   font-size: $textFontSize;
-// }
-
-%fontBase {
-  font-family: $fontFamily;
-}
-
 %textBase {
-  @extend %fontBase;
+  font-family: $fontFamily;
   font-size: $textFontSize;
+  line-height: $lineHeight;
 }
 
 %h1Base {
-  @extend %fontBase;
   font-size: $h1FontSize;
 }
 
 %h2Base {
-  @extend %fontBase;
   font-size: $h2FontSize;
 }
 
 %text {
-  @extend %textBase;
   color: $c0;
 }
 

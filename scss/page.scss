@@ -1,5 +1,5 @@
 .page {
-  line-height: $lineHeight;
+  @extend %textBase;
 
   min-height: 100vh;
   display: flex;
