@@ -1,0 +1,66 @@
+@import 'typography';
+@import 'colors';
+
+// %text {
+//   color: $c0;
+
+//   font-size: $textFontSize;
+// }
+
+%fontBase {
+  font-family: $fontFamily;
+}
+
+%textBase {
+  @extend %fontBase;
+  font-size: $textFontSize;
+}
+
+%h1Base {
+  @extend %fontBase;
+  font-size: $h1FontSize;
+}
+
+%h2Base {
+  @extend %fontBase;
+  font-size: $h2FontSize;
+}
+
+%text {
+  @extend %textBase;
+  color: $c0;
+}
+
+%h1 {
+  @extend %h1Base;
+  color: $c0;
+}
+
+%h2 {
+  @extend %h2Base;
+  color: $c0;
+}
+
+%linkBase {
+  color: $c1;
+  text-decoration: none;
+
+  & > span:hover {
+    text-decoration: underline;
+  }
+}
+
+%link {
+  @extend %textBase;
+  @extend %linkBase;
+}
+
+%h1Link {
+  @extend %h1Base;
+  @extend %linkBase;
+}
+
+%h2Link {
+  @extend %h2Base;
+  @extend %linkBase;
+}

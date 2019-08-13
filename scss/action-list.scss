@@ -1,8 +1,9 @@
 @import 'typography';
-@import 'link';
 
 .action-list {
   &__item {
+    @extend %text;
+
     display: inline-block;
     text-transform: lowercase;
 

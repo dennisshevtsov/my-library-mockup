@@ -1,5 +1,4 @@
 @import 'typography';
-@import 'input';
 
 $labelWidth: 200px;
 $inputWidth: 300px;
@@ -25,9 +24,10 @@ $textAreaHeight: 200px;
   }
 
   &__label {
+    @extend %text;
+
     display: inline-block;
     width: $labelWidth;
-
     padding-left: $gapLR;
   }
 }

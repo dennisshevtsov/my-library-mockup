@@ -1,5 +1,4 @@
 @import 'colors';
-@import 'input';
 
 .grid {
   width: 100%;
@@ -14,6 +13,8 @@
   }
 
   &__cell {
+    @extend %text;
+
     text-align: left;
 
     a {

@@ -3,10 +3,9 @@
 .nav-list {
   display: block;
   background: $c1;
-  font-size: $h2FontSize;
 
   &__item {
-    @extend %link;
+    @extend %h2Link;
     color: #fff !important;
 
     &:first-child {

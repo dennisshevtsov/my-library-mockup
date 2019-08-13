@@ -2,9 +2,6 @@
 @import 'colors';
 
 .page {
-  color: $c0;
-  font-family: $fontFamily;
-  font-size: $textFontSize;
   line-height: $lineHeight;
 
   min-height: 100vh;
@@ -20,10 +17,9 @@
   }
 
   &__brand {
-    @extend %link;
+    @extend %h1Link;
 
     padding-left: $gapLR;
-    font-size: $h1FontSize;
     float: left;
   }
 
