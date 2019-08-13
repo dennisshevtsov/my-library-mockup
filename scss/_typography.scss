@@ -14,3 +14,8 @@ $inputBorderSize: 1px;
 $inputPaddingLR: $gapLR - $inputBorderSize;
 $inputPaddingTB: $gapLR - $inputBorderSize;
 $inputHeight: $inputFontSize + 2 * $inputPaddingTB + 2 * $inputBorderSize;
+
+$buttonFontSize: $inputFontSize;
+$buttonBorderSize: $inputBorderSize;
+$buttonPaddingLR: $inputPaddingLR;
+$buttonPaddingTB: $inputPaddingTB;
