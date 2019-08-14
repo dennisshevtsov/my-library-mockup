@@ -27,6 +27,15 @@
 
   &__ok {
     @extend %primaryButton;
+
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+
+      content: fa-content($fa-var-check);
+
+      padding-right: $gapLR;
+    }
   }
 
   &__cancel {
