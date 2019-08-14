@@ -7,17 +7,19 @@ $textAreaHeight: 200px;
   &__field {
     @extend %input;
 
-    vertical-align: baseline;
-
     @at-root textarea#{&} {
       width: $textAreaWidth;
       height: $textAreaHeight;
 
       line-height: 1.5;
+
+      vertical-align: top;
+      margin-top: $textAreaMarginTB;
     }
 
     @at-root input#{&} {
       width: $inputWidth;
+      vertical-align: baseline;
     }
   }
 

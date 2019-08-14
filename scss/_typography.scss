@@ -19,3 +19,6 @@ $buttonFontSize: $inputFontSize;
 $buttonBorderSize: $inputBorderSize;
 $buttonPaddingLR: $inputPaddingLR;
 $buttonPaddingTB: $inputPaddingTB;
+
+$formPaddingTB: ($lineHeight - $inputHeight) / 2;
+$textAreaMarginTB: $formPaddingTB;

@@ -1,5 +1,3 @@
-$formPaddingTB: ($lineHeight - $inputHeight) / 2;
-
 .form {
   padding-top: $formPaddingTB;
 
@@ -9,13 +7,16 @@ $formPaddingTB: ($lineHeight - $inputHeight) / 2;
   &__controls {
     flex: 1 1 auto;
 
-    display: flex;
-    flex-wrap: wrap;
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 
   &__control {
-    min-width: 50%;
-    flex-grow: 0.5;
+    float: left;
+    width: 50%;
   }
 
   &__action-bar {
