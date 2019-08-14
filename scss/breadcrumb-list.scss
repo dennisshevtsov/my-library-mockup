@@ -8,10 +8,6 @@
     }
 
     & + & {
-      padding: 0px !important;
-      color: $c0;
-      cursor: text;
-  
       &::before {
         content: "/";
   
@@ -23,6 +19,16 @@
         cursor: text;
       }
   
+      &:hover, & > span {
+        text-decoration: none !important;
+      }
+    }
+
+    &:last-child {
+      padding: 0px !important;
+      color: $c0;
+      cursor: text;
+
       &:hover, & > span {
         text-decoration: none !important;
       }
