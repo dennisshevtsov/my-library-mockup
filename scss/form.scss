@@ -25,10 +25,10 @@ $formPaddingTB: ($lineHeight - $inputHeight) / 2;
   }
 
   &__ok {
-    @extend %button;
+    @extend %primaryButton;
   }
 
   &__cancel {
-    @extend %button;
+    @extend %defaultButton;
   }
 }

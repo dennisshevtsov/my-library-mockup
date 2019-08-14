@@ -4,14 +4,35 @@
   @extend %fontBase;
 
   padding: $buttonPaddingTB $buttonPaddingLR;
-  background: $c02;
-  border: $buttonBorderSize solid $c01;
+  border-width: $buttonBorderSize;
+  border-style: solid;
+
   line-height: 1;
   cursor: pointer;
   min-width: 100px;
+}
+
+%defaultButton {
+  @extend %button;
+
+  background: $c02;
+  color: $c0;
+  border-color: $c01;
 
   &:hover {
     background: $c01;
     border-color: $c0-1;
+  }
+}
+
+%primaryButton {
+  @extend %button;
+
+  background: $c1;
+  color: #FFF;
+  border-color: $c12;
+
+  &:hover {
+    background: $c11;
   }
 }
