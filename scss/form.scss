@@ -1,11 +1,12 @@
 .form {
-  padding-top: $formPaddingTB;
-
   display: flex;
   flex-direction: column;
 
   &__controls {
     flex: 1 1 auto;
+
+    padding-top: $formPaddingTB;
+    padding-bottom: $formPaddingTB;
 
     &::after {
       clear: both;
@@ -29,8 +30,7 @@
     @extend %primaryButton;
 
     &:before {
-      @extend %fa-icon;
-      @extend .fas;
+      @extend %fontIcon;
 
       content: fa-content($fa-var-check);
 

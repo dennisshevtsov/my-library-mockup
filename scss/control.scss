@@ -1,6 +1,6 @@
 $labelWidth: 200px;
 $inputWidth: 300px;
-$textAreaWidth: 450px;
+$textAreaWidth: $inputWidth;
 $textAreaHeight: 200px;
 
 .control {
@@ -14,7 +14,7 @@ $textAreaHeight: 200px;
       line-height: 1.5;
 
       vertical-align: top;
-      margin-top: $textAreaMarginTB;
+      margin: $textAreaMarginTB 0;
     }
 
     @at-root input#{&} {

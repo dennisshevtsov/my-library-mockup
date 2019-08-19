@@ -1,5 +1,12 @@
 @import '../node_modules/@fortawesome/fontawesome-free/scss/variables';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/mixins';
-@import '../node_modules/@fortawesome/fontawesome-free/scss/core';
 
-@import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+$fontIconFamily: 'Font Icons';
+
+@font-face {
+  font-family: $fontIconFamily;
+  src: url('../fonts/fa-solid-900.woff2') format('woff2');
+}
+
+%fontIcon {
+  font-family: $fontIconFamily;
+}

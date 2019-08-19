@@ -14,11 +14,12 @@ $inputBorderSize: 1px;
 $inputPaddingLR: $gapLR - $inputBorderSize;
 $inputPaddingTB: $gapLR - $inputBorderSize;
 $inputHeight: $inputFontSize + 2 * $inputPaddingTB + 2 * $inputBorderSize;
+$inputMarginTB: ($lineHeight - $inputHeight) / 2;
 
 $buttonFontSize: $inputFontSize;
 $buttonBorderSize: $inputBorderSize;
 $buttonPaddingLR: $inputPaddingLR;
 $buttonPaddingTB: $inputPaddingTB;
 
-$formPaddingTB: ($lineHeight - $inputHeight) / 2;
-$textAreaMarginTB: $formPaddingTB;
+$formPaddingTB: $inputMarginTB;
+$textAreaMarginTB: $inputMarginTB;
