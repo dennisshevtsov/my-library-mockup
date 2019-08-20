@@ -2,46 +2,42 @@ import { src, dest, watch, series, } from 'gulp';
 import sass from 'gulp-sass';
 import clean from 'gulp-clean-css';
 import concat from 'gulp-concat';
+import del from 'del';
 
-const cssDirName = 'css';
-const fontDirName = 'fonts';
+const stylesFileName = 'styles';
 
-const scssDir = './scss';
-const cssDir = `./${cssDirName}`;
-const fontsSourceDir = './node_modules/@fortawesome/fontawesome-free/webfonts';
-const fontsDestDir = `./${fontDirName}`;
+const cssDir = './css';
+const sassDir = './sass';
+const fontsDir = './node_modules/@fortawesome/fontawesome-free/webfonts';
 
-const prodDir = './prod';
-const prodCssDir = `${prodDir}/${cssDirName}`;
-const prodFontDir = `${prodDir}/${fontDirName}`;
-const prodCssFileName = 'styles.css';
+const cssMask = [`${cssDir}/reset.css`, `${cssDir}/${stylesFileName}.css`];
+const sassMask = `${sassDir}/*.scss`;
+const sassStylesMask = `${sassDir}/${stylesFileName}.scss`;
+const fontsMask = `${fontsDir}/fa-solid-900.woff2`;
 
-const scssMask = `${scssDir}/*.scss`;
-const cssMask = `${cssDir}/*.css`;
-const stylesMask = `${scssDir}/styles.scss`;
-const fontsMask = `${fontsSourceDir}/fa-solid-900.woff2`;
+const buildDir = './build';
+const buildCssDir = `${buildDir}/css`;
+const buildCssFile = `${stylesFileName}.css`;
+const buildFontsDir = `${buildDir}/fonts`;
 
-const buildScss = () => src(stylesMask).
+const buildSass = () => src(sassStylesMask).
                         pipe(sass().on('error', sass.logError)).
                         pipe(dest(cssDir));
 
-const watchScss = () => watch(scssMask, buildScss);
+const watchSass = () => watch(sassMask, buildSass);
 
 const copyFonts = () => src(fontsMask).
-                        pipe(dest(fontsDestDir));
+                        pipe(dest(buildFontsDir));
 
-const buildCssProd = () => src(cssMask).
-                           pipe(concat(prodCssFileName)).
-                           pipe(clean()).
-                           pipe(dest(prodCssDir));
+const buildCss = () => src(cssMask).
+                       pipe(concat(buildCssFile)).
+                       pipe(clean()).
+                       pipe(dest(buildCssDir));
 
-const copyFontsProd = () => src(fontsMask).
-                            pipe(dest(prodFontDir));
+const cleanBuild = () => del(buildDir);
 
-exports.default = series(buildScss, copyFonts);
-exports.watch = watchScss;
+exports.buildSass = buildSass;
+exports.watchSass = watchSass;
 exports.copyFonts = copyFonts;
-
-exports.buildCssProd = buildCssProd;
-exports.copyFontsProd = copyFontsProd;
-exports.buildProd = series(buildCssProd, copyFontsProd);
+exports.buildCss = buildCss;
+exports.default = series(cleanBuild, buildSass, buildCss, copyFonts);
