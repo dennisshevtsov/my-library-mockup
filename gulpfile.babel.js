@@ -24,8 +24,6 @@ const buildSass = () => src(sassStylesMask).
                         pipe(sass().on('error', sass.logError)).
                         pipe(dest(cssDir));
 
-const watchSass = () => watch(sassMask, buildSass);
-
 const copyFonts = () => src(fontsMask).
                         pipe(dest(buildFontsDir));
 
@@ -35,6 +33,9 @@ const buildCss = () => src(cssMask).
                        pipe(dest(buildCssDir));
 
 const cleanBuild = () => del(buildDir);
+
+const build = () => series(cleanBuild, buildSass, buildCss, copyFonts);
+const watchSass = () => watch(sassMask, build());
 
 exports.buildSass = buildSass;
 exports.watchSass = watchSass;

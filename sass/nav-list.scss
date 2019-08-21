@@ -1,17 +1,25 @@
 .nav-list {
   display: block;
-  background: $c1;
+  background: $c12;
 
   &__item {
     @extend %h2Link;
-    color: #fff !important;
+    @extend %link_inverce;
 
-    &:first-child {
-      margin-left: $gapLR;
+    border-bottom: $pageBlockBorder solid $c12;
+    border-right: $pageBlockBorder solid $c12;
+
+    display: block;
+    padding-left: $gapLR;
+
+    &_selected {
+      background: $c14;
+      border-color: $c14;
     }
-  
-    & + & {
-      margin-left: $gapLR;
+
+    &:hover {
+      background: $c11;
+      border-color: $c11;
     }
   }
 }

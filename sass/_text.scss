@@ -18,7 +18,6 @@
 
 %h2Base {
   font-size: $h2FontSize;
-  line-height: 1;
 }
 
 %text {
@@ -36,16 +35,24 @@
 }
 
 %linkBase {
-  color: $c1;
   text-decoration: none;
 
-  & > span:hover {
+  &:hover > span {
     text-decoration: underline;
   }
 }
 
+%link_primary {
+  color: $c1;
+}
+
+%link_inverce {
+  color: #fff;
+}
+
 %link {
   @extend %linkBase;
+  @extend %link_primary;
 }
 
 %h1Link {

@@ -1,6 +1,7 @@
 .menu {
   &__item {
-    @extend %link;
+    @extend %linkBase;
+    @extend %link_inverce;
 
     &:first-child {
       margin-left: $gapLR;

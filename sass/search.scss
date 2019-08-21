@@ -7,9 +7,6 @@
     @extend %defaultButton;
   
     &:before {
-      // @extend %fa-icon;
-      // @extend .fas;
-
       @extend %fontIcon;
 
       content: fa-content($fa-var-search);
