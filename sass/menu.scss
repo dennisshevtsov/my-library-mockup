@@ -10,5 +10,9 @@
     & + & {
       margin-left: $gapLR;
     }
+
+    &:hover > span {
+      text-decoration: underline; // TODO move to another place
+    }
   }
 }

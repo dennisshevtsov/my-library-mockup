@@ -36,10 +36,6 @@
 
 %linkBase {
   text-decoration: none;
-
-  &:hover > span {
-    text-decoration: underline;
-  }
 }
 
 %link_primary {
@@ -53,6 +49,10 @@
 %link {
   @extend %linkBase;
   @extend %link_primary;
+
+  &:hover > span {
+    text-decoration: underline;
+  }
 }
 
 %h1Link {
