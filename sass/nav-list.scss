@@ -10,6 +10,7 @@ $hoverColor: $c1-3;
     @extend %h2Link;
     // @extend %link_inverce;
     color: $c16;
+    line-height: $lineHeight - $pageBlockBorder; // TODO: Fix it
 
     border-bottom: $pageBlockBorder solid $mainColor;
     border-right: $pageBlockBorder solid $mainColor;
@@ -49,6 +50,15 @@ $hoverColor: $c1-3;
       @extend %fontIcon;
 
       content: fa-content($fa-var-list-ul);
+
+      display: inline-block;
+      width: 35px;
+    }
+
+    &_dashboard:before {
+      @extend %fontIcon;
+
+      content: fa-content($fa-var-chart-line);
 
       display: inline-block;
       width: 35px;
