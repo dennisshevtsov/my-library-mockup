@@ -1,4 +1,7 @@
 .breadcrumb-list {
+  background: $c1-7;
+  border-color: $c1-6;
+
   &__item {
     @extend %link;
     text-transform: uppercase;
@@ -26,7 +29,7 @@
 
     &:last-child {
       padding: 0px !important;
-      color: $c0;
+      color: $c16;
       cursor: text;
 
       &:hover, & > span {

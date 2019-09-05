@@ -1,25 +1,57 @@
+$mainColor: $c1-5;
+$selectedColor: $c1-4;
+$hoverColor: $c1-3;
+
 .nav-list {
   display: block;
-  background: $c12;
+  background: $mainColor;
 
   &__item {
     @extend %h2Link;
-    @extend %link_inverce;
+    // @extend %link_inverce;
+    color: $c16;
 
-    border-bottom: $pageBlockBorder solid $c12;
-    border-right: $pageBlockBorder solid $c12;
+    border-bottom: $pageBlockBorder solid $mainColor;
+    border-right: $pageBlockBorder solid $mainColor;
 
     display: block;
     padding-left: $gapLR;
 
     &_selected {
-      background: $c14;
-      border-color: $c14;
+      background: $selectedColor;
+      border-color: $selectedColor;
     }
 
     &:hover {
-      background: $c11;
-      border-color: $c11;
+      background: $hoverColor;
+      border-color: $hoverColor;
+    }
+
+    &_books:before {
+      @extend %fontIcon;
+
+      content: fa-content($fa-var-book);
+
+      display: inline-block;
+      width: 35px;
+    }
+
+    &_authors:before {
+      @extend %fontIcon;
+
+      content: fa-content($fa-var-users);
+
+      display: inline-block;
+      width: 35px;
+    }
+
+    &_genres:before {
+      @extend %fontIcon;
+
+      content: fa-content($fa-var-list-ul);
+
+      display: inline-block;
+      width: 35px;
     }
   }
 }

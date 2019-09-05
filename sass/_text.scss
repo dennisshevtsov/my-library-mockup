@@ -21,7 +21,7 @@
 }
 
 %text {
-  color: $c0;
+  color: $c3;
 }
 
 %h1 {
@@ -38,8 +38,8 @@
   text-decoration: none;
 }
 
-%link_primary {
-  color: $c1;
+%link_default {
+  color: $c13;
 }
 
 %link_inverce {
@@ -48,7 +48,7 @@
 
 %link {
   @extend %linkBase;
-  @extend %link_primary;
+  @extend %link_default;
 
   &:hover > span {
     text-decoration: underline;

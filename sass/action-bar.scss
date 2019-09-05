@@ -1,13 +1,16 @@
 .action-bar {
   display: flex;
 
+  background: $c1-9;
+  border-color: $c1-8;
+
   &__action-list {
     flex-grow: 1;
   }
 
   &__search {
     padding-right: $gapLR;
-    border-right: 1px solid $c01;
+    border-right: 1px solid $c1-8;
   }
 
   &__paging {

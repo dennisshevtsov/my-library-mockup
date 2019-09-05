@@ -41,7 +41,8 @@ $actionBarHeight: $pageBlockHeight;
 
       content: fa-content($fa-var-bars);
 
-      padding-right: $gapLR;
+      display: inline-block;
+      width: 35px;
     }
   }
 
