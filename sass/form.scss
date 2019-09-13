@@ -1,10 +1,9 @@
 .form {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content;
 
   &__controls {
-    flex: 1 1 auto;
-
     padding-top: $formPaddingTB;
     padding-bottom: $formPaddingTB;
 
@@ -21,7 +20,8 @@
   }
 
   &__action-bar {
-    @extend %pageBlock;
+    border-top: 1px solid $c1-8; // TODO: move to another place
+
     text-align: right;
     padding-right: $gapLR;
   }

@@ -7,6 +7,11 @@
     &_headed {
       border-top: none;
       border-bottom: 1px solid $c1-8;
+      background: #fff !important; // TODO: need to fix
+    }
+
+    &:hover {
+      background: $c1-8;
     }
   }
 
