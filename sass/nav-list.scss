@@ -23,7 +23,7 @@ $hoverColor: $c1-3;
       border-color: $selectedColor;
     }
 
-    &:hover {
+    @at-root a#{&}:hover {
       background: $hoverColor;
       border-color: $hoverColor;
     }

@@ -28,8 +28,10 @@
     }
 
     &:last-child {
+      @extend %text;
+
       padding: 0px !important;
-      color: $c16;
+      //color: $c16;
       cursor: text;
 
       &:hover, & > span {
